@@ -27,3 +27,45 @@ function createData(newData, callback) {
 
 // getData();
 createData({ name: "Bhumika", professsion: "Software Engineer" }, getData);
+
+//======Promises=========
+//object represents eventual completion of asynchronous operatioon.  3 states-
+// pending: initial state, neither fulfilled nor rejected.
+// fulfilled: meaning that the operation was completed successfully.
+// rejected: meaning that the operation failed.
+
+//example
+// var Promise = new Promise(function (resolve, reject) {
+//   const x = "gfg";
+//   const y = "fg";
+//   if (x === y) {
+//     resolve();
+//   } else {
+//     reject("failed");
+//   }
+// });
+
+// Promise.then(function () {
+//   console.log("success");
+// }).catch((err) => {
+//   console.log(err);
+// });
+
+function createData(newData) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      data.push(newData);
+      let error = false; //true ->reject will be executed.
+      if (!error) {
+        resolve();
+      } else {
+        reject("Error ocuured!");
+      }
+    }),
+      2000;
+  });
+}
+
+createData({ name: "Shashank", professsion: "Software Engineer" })
+  .then(getData)
+  .catch((err) => console.log(err));
