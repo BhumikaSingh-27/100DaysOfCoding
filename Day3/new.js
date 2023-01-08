@@ -24,7 +24,7 @@ var userDetails2 = {
   age: 25,
 };
 
-//apply function-example
+
 //generic function
 var printAddress = function (state, country) {
   console.log(this.name, state, country);
