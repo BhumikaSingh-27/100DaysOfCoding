@@ -101,7 +101,7 @@ start();
 // async function alpha() {
 //   console.log("1");
 //   await console.log("2");
-//   console.log("3"); //it will be executed only when all the lines are executed from from bal scope
+//   console.log("3"); //it will be executed only when all the lines are executed from from global scope
 // }
 
 // alpha();
