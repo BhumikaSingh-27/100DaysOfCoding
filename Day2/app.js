@@ -44,8 +44,9 @@ function getData() {
 // createData({ name: "Bhumika", professsion: "Software Engineer" }, getData);
 
 //===================Promises===================
-//object represents eventual completion of asynchronous operatioon.  3 states-
-// pending: initial state, neither fulfilled nor rejected.
+//object represents eventual completion of asynchronous operatioon. We use promise to avoid callbackhell. Promise helps in asynschronous execution of code in JS.
+//3 states-
+// pending: initial state, neither fulfilled nor rejected. on hold.
 // fulfilled: meaning that the operation was completed successfully.
 // rejected: meaning that the operation failed.
 
