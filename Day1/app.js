@@ -26,6 +26,8 @@ console.log(sum); //2+3+4+8+9=26
 //Spread
 //======================definition========================
 // Spread syntax allows an iterable(array or object) to be expanded in places where 0 or more arguments(function call) and elements(array literal) are expected
+//spread will expand the arguments from an iterable object
+
 //Spread example
 
 var names = ["Bhumika", "Shashank", "Astha", "Savita"];
@@ -34,7 +36,7 @@ function getNames(name1, name2, name3, name4) {
   console.log(name1, name2, name3, name4);
 }
 
-getNames(...names); 
+getNames(...names);
 //each element in array is passed as argument using spread operator
 // getNames(names[0], names[1], names[2]);
 //getNames(names); //array is passed as a single argument  so num1= ["Bhumika", "Shashank", "Astha", "Savita"] array and other values undefined.
@@ -60,3 +62,5 @@ const newStudent = {
 };
 
 console.log(newStudent);
+
+//NOTE: Spread will not work if var is used, it behaves weird. As this is introduced only in ES6, we should always use it with let or const.
