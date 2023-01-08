@@ -34,7 +34,8 @@ function getNames(name1, name2, name3, name4) {
   console.log(name1, name2, name3, name4);
 }
 
-getNames(...names); //each element in array is passed as argument using spread operator
+getNames(...names); 
+//each element in array is passed as argument using spread operator
 // getNames(names[0], names[1], names[2]);
 //getNames(names); //array is passed as a single argument  so num1= ["Bhumika", "Shashank", "Astha", "Savita"] array and other values undefined.
 

@@ -1,6 +1,21 @@
 //DAY2 - Async JS prograamming
 //Callbacks, promises, async await
 
+//==================Callback==============
+// callback is a function that is passed as an argument to another function. Since calling back this function depends on the function its passed to, hence, named callback.
+
+//simple example
+// function callMyName(name){
+//     console.log(name)
+// }
+
+// function myNames(name, callback){
+//     callback(name)
+// }
+
+// myNames("bhumi",callMyName)
+
+
 const data = [
   { name: "Ajay", professsion: "Software Engineer" },
   { name: "Anuj", professsion: "Software Engineer" },
@@ -18,26 +33,26 @@ function getData() {
   }, 1000); //if 1000, output will not have new inserted data
 }
 
-function createData(newData, callback) {
-  setTimeout(() => {
-    data.push(newData);
-    callback(); //called after data is inserted.
-  }, 2000);
-}
+// function createData(newData, callback) {
+//   setTimeout(() => {
+//     data.push(newData);
+//     callback(); //called after data is inserted.
+//   }, 2000);
+// }
 
 // getData();
-createData({ name: "Bhumika", professsion: "Software Engineer" }, getData);
+// createData({ name: "Bhumika", professsion: "Software Engineer" }, getData);
 
-//======Promises=========
+//===================Promises===================
 //object represents eventual completion of asynchronous operatioon.  3 states-
 // pending: initial state, neither fulfilled nor rejected.
 // fulfilled: meaning that the operation was completed successfully.
 // rejected: meaning that the operation failed.
 
-//example
+//Simple example
 // var Promise = new Promise(function (resolve, reject) {
 //   const x = "gfg";
-//   const y = "fg";
+//   const y = "gfg";
 //   if (x === y) {
 //     resolve();
 //   } else {
@@ -66,6 +81,29 @@ function createData(newData) {
   });
 }
 
-createData({ name: "Shashank", professsion: "Software Engineer" })
-  .then(getData)
-  .catch((err) => console.log(err));
+// createData({ name: "Shashank", professsion: "Software Engineer" })
+//   .then(getData)
+//   .catch((err) => console.log(err));
+
+//==================async await==============
+//The async and await keywords enable asynchronous operations in JS, better way to handle promises. await can  only be used in function body with async keyword.
+
+//asyn example
+async function start() {
+  await createData({ name: "Shashank", professsion: "Software Engineer" });
+  getData(); // this function will be  called only when create data will be executed.
+}
+
+start();
+
+// Simple async await example 
+
+// async function alpha() {
+//   console.log("1");
+//   await console.log("2");
+//   console.log("3"); //it will be executed only when all the lines are executed from from bal scope
+// }
+
+// alpha();
+// console.log("4");
+// console.log("5");
