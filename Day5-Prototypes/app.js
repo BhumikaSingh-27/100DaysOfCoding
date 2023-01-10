@@ -3,6 +3,12 @@
 //JS loosely/ weakly coupled language, we don't have to specifically define the type of variable.
 //undefined is the label/placeholder which is assigned before the execution of code.
 //not defined variables are the ones which are not declared or has not be given memory space.
+//NULL - null is a primitive datatype which represents no value. type of null is object.
+// console.log(2 + null); // 2  we can perform operations (null=0)
+// console.log(false + undefined); //NaN
+// console.log(typeof undefined) //undefined
+// console.log(typeof NaN); //number
+// console.log(isNaN("a")) //isNaN is a function  which checks if the value is NaN OR NOT
 console.log(a) //undefined
 var a = "bhumika"
 
@@ -13,7 +19,8 @@ console.log(b) //error: b is not defined!
 //Prototypes in JS
 // mechanism by which one object inherits the properties of another object.
 //In JS, every object has built-in properties called its prototype. This itself an object and it will have its own buit-in propertied/protoype. This called prototype chaining.
-
+// Is  proto  same as [[ prototype ]]?
+// In reality, the only true difference between prototype and proto is that the former is a property of a class constructor, while the latter is a property of a class instance.
 //example to show prototype
 var person ={
     name:"bhumi",
