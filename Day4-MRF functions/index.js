@@ -91,6 +91,15 @@ arr2.forEach((x) => console.log(x));
 // const result = arr.forEach((x) => x);
 // console.log(result) //undefined.
 
+//forEach example
+// const numbers = [65, 44, 12, 4];
+// numbers.forEach(myFunction)
+
+// function myFunction(item, index, arr) {
+//   arr[index] = item * 10;
+// }
+
+//sort
 // a-b ->asc
 //b-a ->desc
 const sorted = arr.sort((a, b) => a - b);
