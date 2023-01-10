@@ -74,4 +74,20 @@ Array.prototype.convertIntoObject = function(){
 }
 console.log(cities.convertIntoObject())
 
-//create our own Prototype
+//create our own Prototype - constructor
+function MyPrototype(name){
+    this.name = name;
+}
+MyPrototype.prototype = obj1; //inherting the properties of obj same as __proto__
+
+const proto = new MyPrototype("Anuj");
+console.log(proto)
+console.log(proto.getName()) //access methods of obj1
+
+//differnt ways to create an object
+//const object = new Object();
+//const object = new Object({name: "Bhumika"});
+//const object = {
+//     name:"Bhumika"
+// }
+
