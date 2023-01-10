@@ -90,21 +90,21 @@ function createData(newData) {
 //The async and await keywords enable asynchronous operations in JS, better way to handle promises. await can  only be used in function body with async keyword.
 
 //asyn example
-async function start() {
-  await createData({ name: "Shashank", professsion: "Software Engineer" });
-  getData(); // this function will be  called only when create data will be executed.
-}
+// async function start() {
+//   await createData({ name: "Shashank", professsion: "Software Engineer" });
+//   getData(); // this function will be  called only when create data will be executed.
+// }
 
-start();
+// start();
 
 // Simple async await example 
 
-// async function alpha() {
-//   console.log("1");
-//   await console.log("2");
-//   console.log("3"); //it will be executed only when all the lines are executed from from global scope
-// }
+async function alpha() {
+  console.log("1");
+  await console.log("2");
+  console.log("3"); //it will be executed only when all the lines are executed from from global scope
+}
 
-// alpha();
-// console.log("4");
-// console.log("5");
+alpha();
+console.log("4");
+console.log("5");
