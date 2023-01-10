@@ -30,7 +30,7 @@ console.log(output);
 //====================
 //filter
 // used to filter out the array elements based on a condition provided. eg, ele odd/even
-// we provide the condition as a function ir filete function also accespts func as arguement.
+// we provide the condition as a function and it return a new array 
 
 const elemets = [1, 4, 2, 6, 7];
 
@@ -46,6 +46,7 @@ console.log(output); //printsall odd numbers in array
 
 //====================
 //reduce
+//It takes a reducer function as an argument, which will return a single value
 //used when we have to return only one value from array after operation is performed. Where we have to take all the elements of array and return a single value.
 
 //sum or maximum
