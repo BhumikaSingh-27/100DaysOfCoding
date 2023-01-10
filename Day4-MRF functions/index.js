@@ -84,3 +84,5 @@ arr2.forEach((x) => console.log(x));
 //b-a ->desc
 const sorted = arr.sort((a, b) => a - b);
 console.log(sorted);
+
+//NOTE: Difference in forEach and map is, map func return a new array with transformed elements but forEach returns undefined.
