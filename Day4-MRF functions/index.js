@@ -38,7 +38,7 @@ function isOdd(x) {
   return x % 2;
 }
 const output = elemets.filter(isOdd);
-console.log(output); //printsall odd numbers in array
+console.log(output); //prints all odd numbers in array
 
 //example to filter out with condition element greater than 4
 // const output = elemets.filter(x=> x>4)
@@ -53,7 +53,7 @@ console.log(output); //printsall odd numbers in array
 //   ]
 //   const agegrp=students.filter((val)=>(val.age>=21?val.name:false))
 //   console.log(agegrp);
-
+//let store=students.forEach((val)=>{(val.name,":",val.age)}) 
 //====================
 //reduce
 //It takes a reducer function as an argument, which will return a single value
@@ -98,6 +98,7 @@ arr2.forEach((x) => console.log(x));
 // function myFunction(item, index, arr) {
 //   arr[index] = item * 10;
 // }
+
 
 //sort
 // a-b ->asc
