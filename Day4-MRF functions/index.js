@@ -44,6 +44,16 @@ console.log(output); //printsall odd numbers in array
 // const output = elemets.filter(x=> x>4)
 // console.log(output)
 
+//example
+// const students = [
+//     { name: "Arjun", age: 18 },
+//     { name: "akash", age: 20 },
+//     { name: "kunal", age: 23 },
+//     { name: "rohan", age: 24 },
+//   ]
+//   const agegrp=students.filter((val)=>(val.age>=21?val.name:false))
+//   console.log(agegrp);
+
 //====================
 //reduce
 //It takes a reducer function as an argument, which will return a single value
