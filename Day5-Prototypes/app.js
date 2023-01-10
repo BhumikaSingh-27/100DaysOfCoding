@@ -3,17 +3,18 @@
 //JS loosely/ weakly coupled language, we don't have to specifically define the type of variable.
 //undefined is the label/placeholder which is assigned before the execution of code.
 //not defined variables are the ones which are not declared or has not be given memory space.
-// console.log(a) //undefined
-// var a = "bhumika"
+console.log(a) //undefined
+var a = "bhumika"
 
-// console.log(a) //bhumika
-// console.log(b) //error: b is not defined!
+console.log(a) //bhumika
+console.log(b) //error: b is not defined!
 
 
 //Prototypes in JS
 // mechanism by which one object inherits the properties of another object.
 //In JS, every object has built-in properties called its prototype. This itself an object and it will have its own buit-in propertied/protoype. This called prototype chaining.
 
+//example to show prototype
 var person ={
     name:"bhumi",
     greet(){
@@ -22,6 +23,8 @@ var person ={
 }
 console.log(person) // gives build-in methods/prototype of object
 
+
+//Prototype
 var obj1 = {
     name:"Bhumika",
     getName: function(){
@@ -48,7 +51,7 @@ console.log(obj2.getName()) //this will point to the current object, if name not
  
 console.log(obj3)
 console.log(obj3.getName())
-
+//=======================================
 //const object = new Object();
 // console.log(object)
 // const array = new Array();
@@ -63,6 +66,21 @@ Array.prototype.show = function(){
 const cities = ["Delhi","Patna"]
 console.log(cities.show())
 
+var arr = [1, 2, 3];
+console.log(arr);
+
+Array.prototype.show = function () {
+  return this;
+};
+
+console.log(arr.show());
+
+Array.prototype.sum = function(){
+  return this.reduce((acc,cur)=> acc+cur)  //acc=
+}
+
+console.log(arr.sum())
+//================
 
 //to convert array into object
 Array.prototype.convertIntoObject = function(){
