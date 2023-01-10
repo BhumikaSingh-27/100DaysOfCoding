@@ -40,7 +40,7 @@ console.log(obj2)
 console.log(obj2.name) 
 console.log(obj2.getName()) //this will point to the current object, if name not present,it will use prototype object
 
-//inheritance in js
+//inheritance in js - All JavaScript objects inherit properties and methods from a prototype
  var obj3={
     section:"A",
     __proto__:obj2
@@ -48,3 +48,30 @@ console.log(obj2.getName()) //this will point to the current object, if name not
  
 console.log(obj3)
 console.log(obj3.getName())
+
+//const object = new Object();
+// console.log(object)
+// const array = new Array();
+// console.log(array); //contains object ptrototype along with array
+
+//To add function to an existing prototype
+//example - to add method show in array prototype
+Array.prototype.show = function(){
+    return this; //+"hi"
+}
+
+const cities = ["Delhi","Patna"]
+console.log(cities.show())
+
+
+//to convert array into object
+Array.prototype.convertIntoObject = function(){
+    let obj = {};
+    this.forEach(elem =>{
+        obj[elem]=elem;
+    })
+    return obj;
+}
+console.log(cities.convertIntoObject())
+
+//create our own Prototype
