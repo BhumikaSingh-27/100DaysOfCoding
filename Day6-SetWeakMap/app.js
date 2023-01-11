@@ -38,4 +38,45 @@ set.forEach((element) => {
 
 //Map
 //=============Definition==============
-// Map object holds key-value pairs and remembers the original insertion order of the key
+// Map object holds key-value pairs and remembers the original insertion order of the key.
+
+// const myMap = new Map();
+// console.log(myMap)
+
+const myMap = new Map([["1", "one"]]); //Map([])
+console.log(myMap);
+
+myMap.set([
+  ["1", "Ajay"],
+  ["2", "Bhumika"],
+]);
+// myMap.set({name:"bhumika"})
+
+//can overwrite the value for same key
+myMap.set("2", "Vivek");
+
+//to get the value for a key
+myMap.get("1");
+
+//iterate on values via for or forEach
+myMap.forEach((key, value) => {
+  console.log(key);
+});
+
+for (let [key, value] of myMap) {
+  console.log(`${key}:value${value}`);
+}
+
+
+//weakSet
+//collection of only objects
+//no iteration
+const weakSet = new WeakSet();
+console.log(weakSet)
+
+var obj1={"name":"bhumika"}
+var obj2={"roll":19}
+weakSet.add(obj1,obj2)
+
+//weakMap
+//collection of key/value pairs whose keys must be objects
