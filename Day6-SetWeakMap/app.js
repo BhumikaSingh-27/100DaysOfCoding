@@ -36,6 +36,24 @@ set.forEach((element) => {
   console.log(element);
 });
 
+//set advance example
+function unique(arr) {
+    let unique = [...new Set(arr)]; //expanding into arr using spread operator
+    return unique;
+  }
+  
+  let values = [
+    "Hare",
+    "Krishna",
+    "Hare",
+    "Krishna",
+    "Krishna",
+    "Krishna",
+    "Hare",
+    "Hare",
+  ];
+  
+  console.log(unique(values));
 //Map
 //=============Definition==============
 // Map object holds key-value pairs and remembers the original insertion order of the key.
@@ -69,14 +87,34 @@ for (let [key, value] of myMap) {
 
 
 //weakSet
+//====================Definition==================
 //collection of only objects
-//no iteration
+//no iteration possible
+// references to objects in a WeakSet are held weakly. If no other references to an object stored in the WeakSet exist, those objects can be garbage collected.
+
 const weakSet = new WeakSet();
-console.log(weakSet)
+// console.log(weakSet)
 
 var obj1={"name":"bhumika"}
 var obj2={"roll":19}
-weakSet.add(obj1,obj2)
+// weakSet.add(obj1,obj2) //only one object will be inserted.
+weakSet.add(obj1);
+weakSet.add(obj2);
+console.log(weakSet)
+
 
 //weakMap
+//=========================Definition==============
 //collection of key/value pairs whose keys must be objects
+var obj1 = {
+    name: "bhumika",
+  };
+  
+  const wm = new WeakMap();
+  wm.set(obj1, "singh"); 
+//   wm.set(1,"two") //error:Invalid value used as weak map key
+
+// Map - key-value pair of any type , set() =>insert elemts
+//set- unique of any type  add=> insert
+//weakMap -key-value pair, keys->object, value->any type
+//weakSet - unique objects
