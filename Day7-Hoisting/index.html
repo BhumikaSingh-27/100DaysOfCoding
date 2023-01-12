@@ -6,11 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hoisting</title>
+    <style>
+        div {
+            max-width: 500px;
+            max-height: 500px;
+            padding: 100px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>hoisting</h1>
-    <script src="hoisting.js"></script>
+    <!-- <h1>hoisting</h1> -->
+
+    <div id="grandparent">
+        <div id="parent">
+            <div id="child">
+
+            </div>
+        </div>
+    </div>
+    <a href="home.html">Home</a>
+    <script src="prop.js"></script>
 </body>
 
 </html>
