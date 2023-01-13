@@ -4,7 +4,7 @@
 
 //ac w3c first  event capture happens then event bubbling
 // addEventLister(event,callback,usecapture flag)
-// usecapture flag => true (trickling) or false(bubbling)
+// usecapture flag => true (capturing/trickling) or false(bubbling)
 
 // =============Bubbling==============
 
@@ -84,3 +84,36 @@ document.querySelector("a").addEventListener("click", (e) => {
   e.preventDefault();
   console.log("link clicked!");
 });
+
+
+//==========summary============
+// Event bubbling diects an event to its EventTarget.
+// suppose, if an element is clicked, then it triggeres the event handler if it is set
+// then it bubbles up to its parent, and if parent has event handler, it will be triggered
+// Event bubbling :-child to parent
+var div = document.querySelector("#div");
+var button = document.querySelector("#button");
+var a = document.querySelector("a");
+
+
+
+
+div.addEventListener("click",()=>{
+    console.log("div");
+})
+
+button.addEventListener("click",(e)=>{
+    console.log("button");
+    //e.stopPropagation();
+    // e.stopImmediatePropagation();
+})
+
+
+button.addEventListener("click",()=>{
+
+    console.log("button1");
+})
+a.addEventListener("click",(e)=>{
+    e.preventDefault();
+    console.log("button1");
+})
