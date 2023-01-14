@@ -21,8 +21,8 @@ function calc(n){
         cache[n]=res;
         return res
        }
-    
-  }
+    }
+}
   console.time();
   const total = memoize(calc)(5) //currying
   console.log(total)
@@ -30,4 +30,4 @@ function calc(n){
   console.log("----------")
   console.time();
   console.log(calc(5))
-  console.timeEnd()
+  console.timeEnd();
