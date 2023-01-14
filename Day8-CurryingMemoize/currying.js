@@ -2,12 +2,12 @@
 //is an advanced technique of working with functions. It transforms the function with multiple arguments to a function with several single arguments.
 //it takes single argument and return another function.
 
-// function add(a,b,c)
-// {
-//     return a+b+c
-// }
+function add(a,b,c)
+{
+    return a+b+c
+}
 
-// console.log(add(2,3,4))
+console.log(add(2,3,4))
 
 function add(a) {
   return function (b) {
@@ -34,4 +34,17 @@ function showData(obj) {
 
 let data = showData(userData);
 console.log(data("age"));
-// console.log(showData(userData)("name"))
+console.log(showData(userData)("name"))
+
+//Infinite Currying in JS
+function add(a) {
+  return function (b) {
+    if (b) {
+      return add(a + b);
+    }
+    return a;
+  };
+}
+
+console.log(add(5)(2)(5)());
+
