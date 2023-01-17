@@ -28,7 +28,7 @@
 }
 
 //Each key has to be unique.Objects can store both values and functions. When talking about objects, values are called properties, and functions are called methods.
-const obj = {
+const obj1 = {
     prop1: "Hello!",
     prop3: function() {console.log("I'm a property dude!")
 }}
