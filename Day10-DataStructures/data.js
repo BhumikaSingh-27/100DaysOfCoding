@@ -1,4 +1,5 @@
 // Data structure –
+//resurce: https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/#what-is-a-data-structure
 
 // Format to organize manage store data
 // Allows efficient access and modification
