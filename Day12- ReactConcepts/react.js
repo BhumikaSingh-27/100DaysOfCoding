@@ -19,3 +19,36 @@
 //     );
 //   }
 
+//simple exxample of useState
+import "./styles.css";
+import { useState } from "react";
+
+// var color = "red";
+export default function App() {
+  let [size, setSize] = useState(0);
+  let [color, setColor] = useState("transparent");
+  function changeFontIncrease() {
+    let newsize = size + 1;
+    setSize(newsize);
+  }
+
+  function changeFontDecrease() {
+    let newsize = size - 1;
+    setSize(newsize);
+  }
+
+  const changeColor = () => {
+    if (color === "transparent" ? setColor("red"): setColor("transparent"));
+    // setColor(color);
+    
+  };
+  return (
+    <div className="App">
+      <button onClick={changeFontIncrease}>+</button>
+      <button onClick={changeFontDecrease}>-</button>
+      <div>{size}</div>
+      <p style={{ backgroundColor: color }}>I'm the powerful girl!</p>
+      <button onClick={changeColor}>toggle</button>
+    </div>
+  );
+}
