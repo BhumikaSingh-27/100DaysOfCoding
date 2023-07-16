@@ -59,13 +59,16 @@ var printAddress = function (state, country) {
 };
 
 userDetails.printDetails();
+
+//call
 printAddress.call(userDetails, "Patna", "India");
+//apply
+printAddress.apply(userDetails2, ["Delhi", "India"]);
 
 //function borrowing
 userDetails.printDetails.call(userDetails2);
 
-//apply
-printAddress.apply(userDetails2, ["Delhi", "India"]);
+
 
 //bind
 var newPrint = printAddress.bind(userDetails2, "Patna", "India");
