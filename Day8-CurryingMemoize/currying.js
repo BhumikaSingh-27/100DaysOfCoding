@@ -1,9 +1,11 @@
 //curring in JS
-//is an advanced technique of working with functions. It transforms the function with multiple arguments to a function with several single arguments.
+//is an advanced technique of working with functions. 
+// It transforms the function with multiple arguments to a function with several single arguments.
 //it takes single argument and return another function.
 // Currying: Currying is a function that takes one argument at a time and returns a new function expecting the next argument
 // Currying helps you to avoid passing the same variable again and again.
 // It helps to create a higher-order function. It is extremely helpful in event handling. 
+
 
 function add(a,b,c)
 {
