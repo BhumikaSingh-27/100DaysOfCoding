@@ -37,13 +37,42 @@ console.log(mul(9)(2));
 console.log(evaluate("multiply")(3)(4));
 
 //infinite currying
-function sum(a){
-    return function(b){
-        if(b) return sum(a+b)
-        return a
-    }
+function sum(a) {
+  return function (b) {
+    if (b) return sum(a + b);
+    return a;
+  };
 }
 
-console.log(sum(1)(2))
+console.log(sum(1)(2));
 
 //difference between currying and partial application
+// function sum(a){
+//     return function (b){
+//         return function (c){
+//             return a+b+c
+//         }
+//     }
+// }
+
+//partial application - transforms function into another function with small arity(arguments)
+function sum(a) {
+  return function (b, c) {
+    return a + b + c;
+  };
+}
+
+//manipulating DOM - real world senarios for using currying
+function updateHeading(id) {
+  console.log(id);
+  return function (content) {
+    document.querySelector("#" + id).innerText = content;
+  };
+}
+
+const updateHedaingByText = updateHeading("heading");
+
+updateHedaingByText("Hello");
+
+
+//Curried function implementation - f(a,b,c) - f(a)(b)(c)
