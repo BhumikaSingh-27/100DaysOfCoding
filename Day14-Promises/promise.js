@@ -55,7 +55,7 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // promise.catch((err) => console.log(err)).then((res) => console.log(res));
-console.log(promise);
+// console.log(promise);
 console.log("end");
 
 const promiseOne = (text) => {
@@ -92,14 +92,27 @@ const promiseThree = (text) => {
 //   .catch((err) => console.log(err));
 
 //promise chaining
-promiseOne("Hellow there")
-  .then((res) => {
-    console.log(res);
-    return promiseTwo("bye bye");
-  })
-  .then((res) => {
-    console.log(res);
-    return promiseThree("last promise");
-  })
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+// promiseOne("Hellow there")
+//   .then((res) => {
+//     console.log(res);
+//     return promiseTwo("bye bye");
+//   })
+//   .then((res) => {
+//     console.log(res);
+//     return promiseThree("last promise");
+//   })
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));
+
+//Promise combinators
+
+//PROMISE.ALL
+const promise1 = Promise.reject("hello");
+const promise2 = new Promise((resolve, reject) => reject("second"));
+const promise3 = 45;
+Promise.all([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
+Promise.allSettled([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
+Promise.any([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
+Promise.race([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
+
+
