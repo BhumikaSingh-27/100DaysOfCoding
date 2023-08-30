@@ -55,5 +55,51 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // promise.catch((err) => console.log(err)).then((res) => console.log(res));
-console.log(promise)
+console.log(promise);
 console.log("end");
+
+const promiseOne = (text) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(text);
+    }, 2000);
+  });
+};
+
+const promiseTwo = (text) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(text);
+    }, 2000);
+  });
+};
+
+const promiseThree = (text) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(text);
+    }, 2000);
+  });
+};
+
+//calback hell is resolved via promise chaining
+// promiseOne("hello there")
+//   .then((res) => {
+//     console.log(res);
+//     promiseTwo("bye bye").then((res) => {console.log(res);
+//     promiseThree("last promise").then(res=>console.log(res))})
+//   })
+//   .catch((err) => console.log(err));
+
+//promise chaining
+promiseOne("Hellow there")
+  .then((res) => {
+    console.log(res);
+    return promiseTwo("bye bye");
+  })
+  .then((res) => {
+    console.log(res);
+    return promiseThree("last promise");
+  })
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
