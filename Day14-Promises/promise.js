@@ -130,4 +130,9 @@ const results = async () =>{
 }
 results()
 
-//
+//promise plyfill
+function PromisePolyFill(executor){
+
+}
+
+// https://codesandbox.io/s/promise-output-based-questions-c2llq6?file=/src/index.mjs
