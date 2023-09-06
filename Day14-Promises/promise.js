@@ -107,10 +107,10 @@ const promiseThree = (text) => {
 //Promise combinators
 
 //PROMISE.ALL
-// const promise1 = Promise.resolve("hello");
-// const promise2 = new Promise((resolve, reject) => reject("second"));
-// const promise3 = 45;
-// Promise.all([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
+const promise1 = Promise.resolve("hello");
+const promise2 = new Promise((resolve, reject) => reject("second"));
+const promise3 = 45;
+Promise.all([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
 // Promise.allSettled([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
 // Promise.any([promise1, promise2, promise3])
   // .then((res) => console.log(res))
@@ -120,19 +120,19 @@ const promiseThree = (text) => {
 
 //Async await - modern way to handle promises
 
-const results = async () =>{
-  const message1 = await promiseOne("text")
-  const message2 = await promiseTwo("two")
-  const message3 = await promiseThree("three")
-  console.log(message1)
-  console.log(message2)
-  console.log(message3)
-}
-results()
+// const results = async () =>{
+//   const message1 = await promiseOne("text")
+//   const message2 = await promiseTwo("two")
+//   const message3 = await promiseThree("three")
+//   console.log(message1)
+//   console.log(message2)
+//   console.log(message3)
+// }
+// results()
 
-//promise plyfill
-function PromisePolyFill(executor){
+// //promise plyfill
+// function PromisePolyFill(executor){
 
-}
+// }
 
 // https://codesandbox.io/s/promise-output-based-questions-c2llq6?file=/src/index.mjs
