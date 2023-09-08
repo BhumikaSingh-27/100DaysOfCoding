@@ -107,15 +107,15 @@ const promiseThree = (text) => {
 //Promise combinators
 
 //PROMISE.ALL
-const promise1 = Promise.resolve("hello");
+const promise1 = Promise.reject("hello");
 const promise2 = new Promise((resolve, reject) => reject("second"));
 const promise3 = 45;
-Promise.all([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
+// Promise.all([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
 // Promise.allSettled([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
 // Promise.any([promise1, promise2, promise3])
-  // .then((res) => console.log(res))
-  // .catch((err) => console.error(err));
-// Promise.race([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
+//   .then((res) => console.log(res))
+//   .catch((err) => console.error(err));
+Promise.race([promise1, promise2, promise3]).then((res) => console.log(res)).catch(err=>console.error(err));
 
 
 //Async await - modern way to handle promises
