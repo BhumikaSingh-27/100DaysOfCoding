@@ -40,4 +40,12 @@ console.log(findSecondMax([1,4,2,2,3,6,4,3]))
 
 
 //------------------------------------q2:Rotate Array by K-----------------------
- 
+ const rotateArray = (arr,k) =>{
+  const temp = []
+  for(let i=0 ; i<=k ; i++){
+    temp.unshift(arr.shift())
+  }
+  return temp
+ }
+
+ console.log(rotateArray([1,2,3,4,5],2))
