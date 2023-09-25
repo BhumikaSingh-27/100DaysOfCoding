@@ -1,6 +1,7 @@
 //DAY8
 //Memoization
-//Memoization is a technique for speeding up applications by caching the results of expensive function calls and returning them when the same inputs are used again.
+//Memoization is a technique
+// for speeding up applications by caching the results of expensive function calls and returning them when the same inputs are used again.
 //cache -> object
 
 function calc(n){
@@ -23,11 +24,11 @@ function calc(n){
        }
     }
 }
+const myMemoize = memoize(calc) 
   console.time();
-  const total = memoize(calc)(5) //currying
-  console.log(total)
+console.log(myMemoize(5))
   console.timeEnd();
   console.log("----------")
   console.time();
-  console.log(calc(5))
+  console.log(myMemoize(5))
   console.timeEnd();
