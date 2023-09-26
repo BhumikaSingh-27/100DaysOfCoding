@@ -1,7 +1,8 @@
 //DAY8
 //Memoization
 //Memoization is a technique
-// for speeding up applications by caching the results of expensive function calls and returning them when the same inputs are used again.
+// for speeding up applications by caching the results of expensive function calls 
+// and returning them when the same inputs are used again.
 //cache -> object
 
 function calc(n){
