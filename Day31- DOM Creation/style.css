@@ -1,6 +1,10 @@
-#heading{
+#heading {
     font-size: 4rem;
-    color:pink
+    color: pink
 }
 
-.
+.list-item {
+    padding: 2rem;
+    border-color: blue;
+    background-color: azure;
+}
